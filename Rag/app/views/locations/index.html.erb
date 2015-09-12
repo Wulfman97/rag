@@ -1,2 +1,8 @@
-<h1>Locations#index</h1>
-<p>Find me in app/views/locations/index.html.erb</p>
+<h1>Locations Index</h1>
+<% @locations.each do |location| %>
+<h4><%= location.address %></h4>
+<p> <%= location.latitude %></p>
+<p><%= location.longitude %></p>
+<%= link_to 'Show Location', location_path(location) %>
+<% end %>
+
