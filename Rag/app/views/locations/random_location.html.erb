@@ -1,12 +1,9 @@
-<p>Test Page!</p>
 <h1> Location of the Day </h1>
 <h3><%= @random_location.address %></h3>
 <p><%= @random_location.latitude %></p>
-
-<p><%= @random_location.longitude %></p> <br /> <br />
-
-<p><%= @random_location.longitude %></p>
-<h4>Here is your <%= link_to "map.", location_map_url(@location), :target => "_blank" %></h4> 
+<p><%= @random_location.longitude %></p> 
+<br />
+<h4>Here is your <%= link_to "map.", random_location_map_url, :target => "_blank" %></h4> 
 <br>
 
 <% @comments.each do |comment| %>

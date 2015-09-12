@@ -7,12 +7,13 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
+  <div class="container">
+    <body>
+      <%= render 'layouts/navbar' %>
+    <%= yield %>
 
-  <body>
-    <%= render 'layouts/navbar' %>
-  <%= yield %>
-
-  </body>
+    </body>
+  </div>
 
   <script type="text/javascript">
     $(".button-collapse").sideNav();
