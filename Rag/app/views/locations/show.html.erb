@@ -3,7 +3,7 @@
 <p><%= @location.latitude %></p>
 <p><%= @location.longitude %></p>
 
-<h4>Here is your target <%= link_to "map.", location_map_url(@location), :target => "_blank"%></h4>
+<h4>Here is your target <%= link_to "map.", location_map_url, :target => "_blank"%></h4>
 
 <br>
 <%= link_to 'Back', locations_path %>
@@ -14,6 +14,9 @@
 <p><%= comment.comment %></p>
 <% end %>
 <%=link_to 'Add Comment', new_location_comment_path(@random_location) %>
+
+<br>
+<%= link_to 'Back', locations_path %>
 
 
 
