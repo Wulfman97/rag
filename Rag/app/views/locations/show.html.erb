@@ -2,6 +2,8 @@
 <h4><%= @location.address %></h4>
 <p><%= @location.latitude %></p>
 <p><%= @location.longitude %></p>
+<h4>Here is your target <%= link_to "map.", location_map_url(@location), :target => "_blank"%></h4
+<br>
 <%= link_to 'Back', locations_path %>
 
 

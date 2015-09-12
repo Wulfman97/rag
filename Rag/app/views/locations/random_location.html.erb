@@ -3,4 +3,6 @@
 <h4><%= @random_location.address %></h4>
 <p><%= @random_location.latitude %></p>
 <p><%= @random_location.longitude %></p>
+<h4>Here is your <%= link_to "map.", location_map_url(@location), :target => "_blank" %></h4> 
+<br>
 <%= link_to 'Back', locations_path %>
