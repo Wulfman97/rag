@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  before_action :find_location, :only [:edit, :show, :update, :destroy]
+  before_action :find_location, only: [:edit, :show, :update, :destroy]
   
   def index
     @locations = Location.all
