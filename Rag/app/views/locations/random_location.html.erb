@@ -1,6 +1,14 @@
 <p>Test Page!</p>
 <h1> Location of the Day </h1>
-<h4><%= @random_location.address %></h4>
+<h3><%= @random_location.address %></h3>
 <p><%= @random_location.latitude %></p>
-<p><%= @random_location.longitude %></p>
+<p><%= @random_location.longitude %></p> <br /> <br />
+
+<!-- iterate through @omments below -->
+<% @comments.each do |comment| %>
+<h3><%= comment.user_name %></h3>
+<p><%= comment.title %></p>
+<p><%= comment.comment %></p>
+<% end %>
+<%=link_to 'Add Comment', new_location_comment_path(@random_location) %>
 <%= link_to 'Back', locations_path %>

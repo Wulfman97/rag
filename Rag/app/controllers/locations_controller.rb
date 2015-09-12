@@ -30,11 +30,15 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @comments = Location.find(params[:id]).comments
+    @random_location = Location.find(params[:id])
+    #@comments = @random_location.comments
   end
 
   def random_location
     @locations = Location.all
     @random_location = @locations.sample
+    @comments = @random_location.comments
   end
 
   def destroy

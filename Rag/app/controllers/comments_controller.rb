@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
 
   def show
     @comment = Comment.find(params[:id])
+    @comments = @random_location.comments
   end
 
   def new
@@ -18,14 +19,14 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to locations_path
+    redirect_to random_path
   end
   
   def update
   @comment = Comment.find(params[:id])
 
     if @comment.update(comment_params)
-      redirect_to locations_path
+      redirect_to random_path
     else
       render :edit
     end
@@ -35,7 +36,7 @@ class CommentsController < ApplicationController
    @comment = Comment.new(comment_params)
  
    if @comment.save
-     redirect_to comments_path
+     redirect_to location_path(params[:location_id])
    else
      render :new
    end
