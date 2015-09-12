@@ -1,4 +1,4 @@
-<h1>Locations Index</h1>
+<h1>Locations Index</h1> <hr />
 <p><%= link_to 'Add new Location', new_location_path %></p>
 <% @locations.each do |location| %>
 <h4><%= location.address %></h4>
@@ -6,7 +6,7 @@
 <p><%= location.longitude %></p>
 <%= link_to 'Show Location', location_path(location) %> | 
 <%= link_to 'Edit Location', edit_location_path(location) %> | 
-<%= link_to 'Destroy Location', location, method: :delete %> <br>
+<%= link_to 'Destroy Location', location, method: :delete %> <hr />
 <% end %>
 
-<%= link_to 'Random Page', random_path %> 
+<h3><%= link_to 'Random Page', random_path %></h3>
