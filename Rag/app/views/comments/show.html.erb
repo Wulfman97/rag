@@ -1,0 +1,7 @@
+<h2> Comment </h2>
+<h3><%= @comment.user_name %></h3>
+<h3><%= @comment.title %></h3>
+<h3><%= @comment.comment %></h3>
+<%= link_to 'Back', location_path %>
+<%= link_to 'Edit', edit_comment_path %>
+<%= link_to 'Destroy', comment_path %>
