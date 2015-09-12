@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
+  get 'random' => 'locations#random_location'
 
   resources :locations
   resources :comments

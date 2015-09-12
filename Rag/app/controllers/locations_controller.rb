@@ -33,6 +33,7 @@ class LocationsController < ApplicationController
   end
 
   def random_location
+    @locations = Location.all
     @random_location = @locations.sample
   end
 
