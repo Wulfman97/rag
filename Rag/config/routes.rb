@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  root 'locations#random_location'
   get 'random' => 'locations#random_location'
 
   resources :locations do
