@@ -1,2 +1,13 @@
-<h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<h1> New Location </h1>
+<%= form_for @location do |f| %>
+  <%= f.label :address %>: 
+  <%= f.text_field :address %>
+
+  <%= f.label :latitude %> 
+  <%= f.text_field :latitude %>
+
+  <%= f.label :longitude %>
+  <%= f.text_field :longitude %>
+
+  <%= f.submit %>
+<% end %>
